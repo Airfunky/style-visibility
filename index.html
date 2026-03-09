@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+             height: 100vh;
+             display: flex;
+        }
+        main{
+            display: flex;
+            width: 70%;
+            height: 100%;
+              background-color: red;
+        }
+        aside{
+         text-align: center;
+            
+            width: 30%;
+            height: 100%;
+            background-color: blue;
+        }
+        
+        button{
+            height: 50px;
+            width: 100px;
+        }
+
+        div{
+            height: 50px;
+            width: 50px;
+        }
+
+        .div1{
+            background-color: pink;
+        }
+
+        .div2{
+            background-color: green;
+        }
+
+        .div3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body> 
+    <section class="container">
+   <main>
+    <div class="div1" id="div1">div1</div>
+    <div class="div2" id="div2">div2</div>
+    <div class="div3" id="div3">div3</div>
+   </main>
+   <aside>
+        <button onclick="pokaz1()">Pokaz div1</button>
+        <br>
+        <br>
+        <button onclick="pokaz2()">Pokaz div2</button>
+        <br>
+        <br>
+        <button onclick="pokaz3()">Pokaz div3</button>
+   </aside>
+   </section>
+
+   <script>
+        let div1 =  document.getElementById("div1");
+        let div2 =  document.getElementById("div2");
+        let div3 =  document.getElementById("div3");
+
+        div1.style.visibility = "hidden";
+        div2.style.visibility = "hidden";
+        div3.style.visibility = "hidden";
+
+        function pokaz1()
+        { 
+            div1.style.visibility = "visible"
+        };
+        
+         function pokaz2()
+        { 
+            div2.style.visibility = "visible"
+        };
+
+         function pokaz3()
+        { 
+            div3.style.visibility = "visible"
+        };
+   </script>
+</body>
+</html>
